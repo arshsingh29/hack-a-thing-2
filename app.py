@@ -82,10 +82,11 @@ if __name__ == '__main__':
         config.validate()
         print(f"✓ Configuration valid")
         print(f"✓ Output directory: {config.OUTPUT_DIR}")
-        print(f"✓ Starting Flask server on http://0.0.0.0:5000")
+        print(f"✓ Starting Flask server on http://0.0.0.0:8080")
+        print(f"✓ Access at: http://localhost:8080")
     except ValueError as e:
         print(f"✗ Configuration error: {e}")
         print("Please set up your .env file with REPLICATE_API_KEY")
         exit(1)
 
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8080)
