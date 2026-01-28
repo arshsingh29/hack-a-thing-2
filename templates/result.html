@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Generated Video{% endblock %}
+
+{% block content %}
+<div class="result-container">
+    <h2>Your Generated Video</h2>
+
+    <div class="prompt-display">
+        <strong>Prompt:</strong> {{ prompt }}
+    </div>
+
+    <div class="video-container">
+        <video controls autoplay loop>
+            <source src="{{ url_for('serve_video', filename=filename) }}" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </div>
+
+    <div class="actions">
+        <a href="{{ url_for('download_video', filename=filename) }}" class="btn btn-primary" download>
+            Download Video
+        </a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">
+            Generate Another Video
+        </a>
+    </div>
+</div>
+{% endblock %}
