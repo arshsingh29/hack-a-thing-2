@@ -1,4 +1,4 @@
-# AI Video Generator
+# AI Video Generator (hack-a-thing-2)
 
 Personalized video generation platform using AI-generated video clips.
 
