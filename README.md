@@ -18,19 +18,27 @@ pip install -r requirements.txt
 3. Configure your API keys:
 ```bash
 cp .env.example .env
-# Edit .env with your API keys
+# Edit .env with your API keys (REPLICATE_API_KEY required)
 ```
 
-## Project Structure
-
-- `src/` - Main source code
-  - `generators/` - Video generation modules
-  - `personalization/` - User data and personalization logic
-  - `utils/` - Helper functions
-- `examples/` - Example scripts
-- `output/` - Generated videos
-
 ## Usage
+
+### Web Interface (Recommended)
+
+Start the Flask web application:
+```bash
+python app.py
+```
+
+Then open your browser to: **http://localhost:5000**
+
+Features:
+- Simple web form to enter video prompts
+- Real-time video generation
+- View and download generated videos
+- Clean, modern UI
+
+### Python API
 
 ```python
 from src.generators.video_generator import VideoGenerator
@@ -42,9 +50,47 @@ video = generator.generate(
 )
 ```
 
+### Command Line Examples
+
+```bash
+# Basic generation
+python examples/basic_generation.py
+
+# Personalized videos
+python examples/personalized_generation.py
+
+# Async generation with status polling
+python examples/async_generation.py
+```
+
+## Project Structure
+
+- `app.py` - Flask web application
+- `src/` - Main source code
+  - `generators/` - Video generation modules
+  - `personalization/` - User data and personalization logic
+  - `utils/` - Helper functions
+- `templates/` - HTML templates for web interface
+- `static/` - CSS and JavaScript assets
+- `examples/` - Example scripts
+- `output/` - Generated videos
+
 ## Features
 
-- AI-generated video clips using text-to-video models
-- Personalization engine for custom content
-- Modular architecture for easy extension
-- Support for multiple AI providers
+- **Web Interface** - Easy-to-use browser-based video generation
+- **AI-Generated Video Clips** - Text-to-video using state-of-the-art models
+- **Personalization Engine** - Custom content based on user data
+- **Multiple AI Providers** - Support for Replicate, with extensible architecture
+- **Modular Design** - Clean, maintainable codebase
+- **Async Support** - Non-blocking generation for multiple videos
+
+## API Keys
+
+You'll need a Replicate API key:
+1. Sign up at [replicate.com](https://replicate.com)
+2. Get your API token from account settings
+3. Add it to your `.env` file
+
+Optional keys:
+- `ANTHROPIC_API_KEY` - For AI-powered prompt enhancement
+- `OPENAI_API_KEY` - For future integrations
