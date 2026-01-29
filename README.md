@@ -2,6 +2,26 @@
 
 Personalized video generation platform using AI-generated video clips.
 
+### What We Built
+
+We built an AI-powered video generation platform that allows users to create personalized videos from text prompts. The system includes both a Python API and a web interface, integrating with Replicate's text-to-video models (Zeroscope) to generate custom video content. The platform features a modular architecture that supports personalization and multiple AI providers.
+
+### Who Did What
+
+Isaac worked on the video generation system, signing up and working with Replicate as the AI API platform. Arsh worked on making the API work across multiple devices and integrating the system into a web interface.
+
+### What We Learned
+
+The majority of the project was invested in learning about how to work with APIs. We learned about authentication with API keys and that a budget is necessary for this project because AI generation is not free. This is especially important when considering the quality and speed of the video generation that we want for our project.
+
+### How This Relates to Possible Project Ideas
+
+Since our project is involved in personalized AI generated videos, we tried to work on specific video generation through text. Again, we want to emphasize how if we want to use APIs to try to AI generate videos, we need to consider how coming up with high quality videos may come with a high cost.
+
+### What Didn't Work
+
+The API had very large limitations with the video generating very low quality videos or just completely not showing the text prompt inputted. Another limitation was the speed as the video generation took minutes to work given a prompt. 
+
 ## Setup
 
 1. Create a virtual environment:
