@@ -20,7 +20,7 @@ Since our project is involved in personalized AI generated videos, we tried to w
 
 ### What Didn't Work
 
-The API had very large limitations with the video generating very low quality videos or just completely not showing the text prompt inputted. Another limitation was the speed as the video generation took minutes to work given a prompt. 
+The API had very large limitations with the video generating very low quality videos or just completely not showing the text prompt inputted. Another limitation was the speed as the video generation took minutes to work given a prompt. This model could not implement audio and although extensive testing could not be done due to the cost, we think that it has a hard time coming up with vidoes including humans.
 
 ## Setup
 
